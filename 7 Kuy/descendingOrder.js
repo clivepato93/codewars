@@ -17,10 +17,9 @@ function descendingOrder(n){
     // console.log(n,mod)
     increment++
   }
-  arr = arr.sort((a,b)=>a-b)
+  arr = arr.sort((a,b)=>b-a)
   for (let i = 0; i < arr.length; i++) {
-    const num = i?(10**i*arr[i]):arr[i]
-      maxNum+= num
+      maxNum= maxNum*10+arr[i]
      
   }
   return maxNum
