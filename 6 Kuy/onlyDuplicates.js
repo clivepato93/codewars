@@ -51,5 +51,25 @@ const duplicatesEntries ={}
 } 
 
 
+function onlyDuplicates(str) {
+  // your code here
+const duplicatesEntries ={}
+const addedLetter = {}
+ let cs = [];
+  for (let i =0;i<str.length;i++) {
+     const char = str[i]
+     if(char in duplicatesEntries){
+        duplicatesEntries[char] +=1
+
+     }
+     else{
+        duplicatesEntries[char] =1
+     }
+  }
+
+  return cs.join('')
+} 
+
+
 
 console.log(onlyDuplicates('abccdefee'), 'cceee', "onlyDuplicates('abccdefee')")
