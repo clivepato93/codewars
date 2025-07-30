@@ -24,3 +24,5 @@ function buildOneTwoThree() {
 	return head;
 }
 console.log(buildOneTwoThree());
+
+module.exports = buildOneTwoThree;
