@@ -15,10 +15,3 @@ function sortedInsert(head, data) {
   return head
 }
 
-function sortedInsert(head, data) {
-  // Your code goes here.
-  // Remember to return the head of the list.
-return !head || data<= head.data? new Node(data,head) : (head.next = sortedInsert(head.next,data),head)
-}
-
-
