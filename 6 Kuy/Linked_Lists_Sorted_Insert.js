@@ -3,7 +3,7 @@
 // Data Structures
 // Fundamentals
 
-const buildOneTwoThree = require('../7 Kuy/push_&_buildOneTwoThree')
+// const buildOneTwoThree = require('../7 Kuy/push_&_buildOneTwoThree')
 
 function Node(data,next=null) {
   this.data = data;
@@ -12,38 +12,41 @@ function Node(data,next=null) {
 
 
 
+// function sortedInsert(head, data) {
+  // Your code goes here.
+  // Remember to return the head of the list.
+//   let pointer = head;
+//   if(!head) return new Node(data)
+//   if(head.data>= data){
+//    return new Node(data,head)
+//   }
+//   while(pointer ){
+//     if(!pointer.next || pointer.next.data>= data){
+//       pointer.next = new Node(data,pointer.next)
+//       break;
+//     }
+//     pointer = pointer.next
+//   }
+//   return head 
+// }
+
 function sortedInsert(head, data) {
   // Your code goes here.
   // Remember to return the head of the list.
-  let pointer = head;
-  if(!head) return new Node(data)
-  if(head.data>= data){
-   return new Node(data,head)
-  }
-  while(pointer ){
-    if(!pointer.next || pointer.next.data>= data){
-      pointer.next = new Node(data,pointer.next)
-      break;
-    }
-    pointer = pointer.next
-  }
-  return head 
+  if(!head || data< head.data) return new Node(data,head)
+  head.next = sortedInsert(head.next,data)
+  return head
 }
 
-// function sortedInsert(head, data) {
-  // Your code goes here.
-  // Remember to return the head of the list.
-//   if(!head || data<= head.data) return new Node(data,head)
-//   head.next = sortedInsert(head.next,data)
-//   return head
-// }
 
 // function sortedInsert(head, data) {
   // Your code goes here.
   // Remember to return the head of the list.
-// return !head || data<= head.data? new Node(data,head) : (head.next = sortedInsert(head.next,data),head)
-// }
+  // return !head || data< head.data? new Node(data,head) : (head.next = sortedInsert(head.next,data),head)
+  // }
 
 // console.log(sortedInsert(buildOneTwoThree(), 3.5).next.next.next.data, 3.5, "value for node at index 3 should be 3.5.");
 // console.log(sortedInsert(buildOneTwoThree(), 0.5).data, 0.5, "should be able to insert new node at head of list.");
-console.log(sortedInsert(buildOneTwoThree(), 1.5).next.data, 1.5, "value for node at index 1 should be 1.5");
+// console.log(sortedInsert(buildOneTwoThree(), 1.5).next.data, 1.5, "value for node at index 1 should be 1.5");
+
+module.exports = sortedInsert;
