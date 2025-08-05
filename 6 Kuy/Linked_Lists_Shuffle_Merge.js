@@ -4,29 +4,6 @@
 // Data Structures
 // Algorithms
 
-const buildList = require('./buildList')
-function Node(data,next=null) {
-  this.data = data === undefined ? null : data;
-  this.next = next;
-}
-
-
-// function shuffleMerge(first, second) {
-//   // Your code goes here.
-//   if(!first) return second
-//   if(!second) return first
-  
-//   return second && turn?new Node(first.data, shuffleMerge(first.next,second,!turn)): new Node(second.data, shuffleMerge(first,second.next,!turn))
-// //   return first.data && !flip && second ? new Node(first.data,shuffleMerge(first.next,second, !flip)) : new Node(second.data,shuffleMerge(first,second.next, !flip)) 
-// }
-
-function shuffleMerge(first, second) {
-  // Your code goes here.
-  if(!first) return second
-  if(!second) return first
-  
-  return new Node(first.data, shuffleMerge(second,first.next))
-}
 
     // console.log(shuffleMerge(new Node(23), new Node(44)), buildList([23, 44]), "result should be 23 -> 44 -> null.");
 

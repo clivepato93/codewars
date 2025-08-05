@@ -5,33 +5,6 @@
 // Fundamentals
 const buildList = require("./buildList");
 
-// function removeDuplicates(head) {
-// 	// Your code goes here.
-// 	// Remember to return the head of the list.
-// 	if (!head) return head;
-//     head.next = removeDuplicates(head.next)
-// 	if(head.next && head.data == head.next.data) return head.next
-// 	return head;
-// }pro
-
-function removeDuplicates(head) {
-	// Your code goes here.
-	// Remember to return the head of the list.
-
-	let pointer = head;
-	while(pointer && pointer.next){
-
-		if (pointer.data == pointer.next.data){
-			pointer.next = pointer.next.next
-			
-		} 
-		else{
-			pointer = pointer.next
-		}
-	}
-	return head;
-}
-
 
 // console.log(
 // 	removeDuplicates(buildList([1, 2, 2])),

@@ -4,43 +4,7 @@
 // Data Structures
 // Fundamentals
 const buildOneTwoThree = require('../7 Kuy/push_&_buildOneTwoThree');
-class Node {
-    constructor(data,next=null) {
-        this.data = data;
-        this.next = next;
-    }
-}
 
-// function insertNth(head, index, data) {
-//   // Your code goes here.
-//   // Return the head of the list.
-//     if(typeof head == 'function') throw new Error('error')
-
-//   if(!index|| !head) return new Node(data,head)
-//     // let prev = 
-//   let ref =index
-// let prev = head
-// //   let pointer = head
-//   while(index){ 
-//       if(index!=ref && prev.next) prev = prev.next
-//       index--;
-// }
-
-// prev.next = new Node(data,prev.next)
-//   return head
-// }
-
-function insertNth(head, index, data) {
-  // Your code goes here.
-  // Return the head of the list.
-
-  if(!index|| !head) return new Node(data,head)
-    // let prev = 
-  head.next = insertNth(head.next,index-1,data)
-
-
-  return head
-}
 
 
 // console.log(insertNth(null, 0, 12).data, 12, "should be able to insert a node on an empty/null list.");

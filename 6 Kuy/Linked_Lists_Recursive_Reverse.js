@@ -1,7 +1,3 @@
-function Node(data, head = null) {
-  this.data = data === undefined ? null : data;
-  this.next = head;
-}
 
 
 // const list = buildList([3, 8, 1]);
