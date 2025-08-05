@@ -1,5 +1,5 @@
 // https://www.codewars.com/kata/55dd5386575839a74f0000a9/train/javascript
-const buildList = require('../6 Kuy/buildList')
+const buildList = require('../6 Kuy/Linked_Lists_buildList')
 function Node(data, next = null) {
   this.data = data;
   this.next = next;

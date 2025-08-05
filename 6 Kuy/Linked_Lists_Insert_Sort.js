@@ -1,6 +1,6 @@
 // https://www.codewars.com/kata/55d0c7ee7c0d30a12b000045/train/javascript
 
-const buildList = require('./buildList')
+const buildList = require('./Linked_Lists_buildList')
 
 
 const sortedInsert = require('./Linked_Lists_Sorted_Insert')
