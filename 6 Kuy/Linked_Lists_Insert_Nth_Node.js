@@ -3,8 +3,21 @@
 // Linked Lists
 // Data Structures
 // Fundamentals
-const buildOneTwoThree = require('../7 Kuy/push_&_buildOneTwoThree');
+const {buildOneTwoThree} = require('../7 Kuy/push_&_buildOneTwoThree');
 
+function insertNth(head,index,data){
+  if(index&& !head) throw Error;
+  if(!index) return new Node(data,head)
+  head.next = insertNth(head.next,index-=1,data)
+return head
+}
+
+function insertNth(head,index,data){
+  if(index&& !head) throw Error;
+   return !index? new Node(data,head): (head.next = insertNth(head.next,index-=1,data),head)
+  
+
+}
 
 
 // console.log(insertNth(null, 0, 12).data, 12, "should be able to insert a node on an empty/null list.");

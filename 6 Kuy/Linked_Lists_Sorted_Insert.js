@@ -3,11 +3,21 @@
 // Data Structures
 // Fundamentals
 
-// const buildOneTwoThree = require('../7 Kuy/push_&_buildOneTwoThree')
+const {buildOneTwoThree} = require('../7 Kuy/push_&_buildOneTwoThree')
+const Node = require('../7 Kuy/Linked_LIsts_Create_Node')
+function sortedInsert(head,data){
+    if(!head) return new Node(data)
+    if(data<head.data) return new Node(data,head)
+    head.next = sortedInsert(head.next,data)
+    return head
+}
 
-
-// console.log(sortedInsert(buildOneTwoThree(), 3.5).next.next.next.data, 3.5, "value for node at index 3 should be 3.5.");
-// console.log(sortedInsert(buildOneTwoThree(), 0.5).data, 0.5, "should be able to insert new node at head of list.");
-// console.log(sortedInsert(buildOneTwoThree(), 1.5).next.data, 1.5, "value for node at index 1 should be 1.5");
+function sortedInsert(head,data){
+   
+    return !head? new Node(data):data<head.data? new Node(data,head):(head.next = sortedInsert(head.next,data),head)
+}
+console.log(sortedInsert(buildOneTwoThree(), 3.5).next.next.next.data, 3.5, "value for node at index 3 should be 3.5.");
+console.log(sortedInsert(buildOneTwoThree(), 0.5).data, 0.5, "should be able to insert new node at head of list.");
+console.log(sortedInsert(buildOneTwoThree(), 1.5).next.data, 1.5, "value for node at index 1 should be 1.5");
 
 module.exports = sortedInsert;
