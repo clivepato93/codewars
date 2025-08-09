@@ -6,11 +6,11 @@
 const buildList = require("./Linked_Lists_buildList");
 
 
-// console.log(
-// 	removeDuplicates(buildList([1, 2, 2])),
-// 	buildList([1, 2]),
-// 	"should remove the duplicate '2' entries"
-// );
+console.log(
+	removeDuplicates(buildList([1, 2, 2])),
+	buildList([1, 2]),
+	"should remove the duplicate '2' entries"
+);
 // console.log(
 // 	removeDuplicates(buildList([1, 1, 1, 1, 1])),
 // 	buildList([1]),
@@ -21,8 +21,8 @@ const buildList = require("./Linked_Lists_buildList");
 // 	buildList([1, 2, 3, 4, 5]),
 // 	"should remove the duplicate '3' and '4' entries"
 // );
-// console.log(
-// 	removeDuplicates(buildList([1, 1, 1, 1, 2, 2, 2, 2])),
-// 	buildList([1, 2]),
-// 	"should remove the duplicate '1' and '2' entries"
-// );
+console.log(
+  removeDuplicates(buildList([1, 1, 1, 1, 2, 2, 2, 2])),
+  buildList([1, 2]),
+  "should remove the duplicate '1' and '2' entries"
+);
