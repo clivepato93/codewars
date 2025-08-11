@@ -7,13 +7,7 @@ function Node(data,next=null) {
 
 const buildList = require('./Linked_Lists_buildList')
 
-// function reverse(list){
-//     let reversed = null
-//     for (; list;list=list.next ) {
-//         reversed = new Node(list.data,reversed)        
-//     }
-//     return reversed
-// }
+
 
 
 
