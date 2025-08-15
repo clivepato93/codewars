@@ -5,7 +5,6 @@
 
 function aliasGen(first, last){
     // Code Here
-//   console.log(first[0].toUpperCase())
 const regex = /[a-z]/i;
   if(!regex.test(first[0])|| !regex.test(last[0])){
     return "Your name must start with a letter from A - Z."
