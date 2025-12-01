@@ -13,3 +13,36 @@ if(results.length%2) return false
   }
   return true;
 }
+
+
+function isAValidMessage(message){
+  // console.log(message)
+  // your code
+  for(let i =0; i<message.length;i++){
+   
+      let digit = +message[i]
+      while(/\d/.test(message[i+1])){
+        if(/\d/.test(message[i])){
+          digit*=10;
+          digit+=  +message[i+1];
+          i++
+      
+        }
+        else{
+          break;
+        }
+      
+       
+    }
+    i+=digit
+  
+    if(message[i]==undefined|| !/[a-z]/i.test(message[i])){
+      return false
+    }
+}
+  return true;
+  }
+
+
+console.log(isAValidMessage("3hey5hello2hi"), true);
+console.log(isAValidMessage("4code13hellocodewars"), true);
