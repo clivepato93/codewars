@@ -1,5 +1,9 @@
 // https://www.codewars.com/kata/523f5d21c841566fde000009/train/javascript
 
+// Arrays
+// Fundamentals
+// Algorithms
+
 function arrayDiff(a,b) {
 let i = 0;
 const obj = {}
@@ -22,4 +26,4 @@ while(i!=a.length){
 return newArr
 }
 
-    console.log(arrayDiff([1,2], [1]), [2], "a was [1,2], b was [1]");
+console.log(arrayDiff([1,2], [1]), [2], "a was [1,2], b was [1]");
