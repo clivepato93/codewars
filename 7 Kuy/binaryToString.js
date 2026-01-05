@@ -4,6 +4,15 @@ function binaryToString(binary) {
     const letters = binary.split('0b')
     return letters.slice(1).reduce((word,letter)=> word =word+String.fromCharCode(parseInt(letter,2)),'');
 }
+
+function binaryToString(binary) {
+  
+  const words = binary.split('0b')
+
+      return words.map(v=> Number.isNaN(parseInt(v,2))? '': String.fromCharCode(parseInt(v,2))).join('');
+
+}
+
 console.log(binaryToString("0b10000110b11000010b1110100"), "Cat");
 console.log(
   binaryToString(

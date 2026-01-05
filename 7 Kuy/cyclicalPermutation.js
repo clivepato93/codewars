@@ -1,3 +1,4 @@
+// https://www.codewars.com/kata/557592fcdfc2220bed000042/train/javascript
 // ASCII ArtFundamentals
 function pattern(n) {
 	// Happy Coding ^_^
@@ -17,6 +18,10 @@ function pattern(n) {
 	return arr.join("\n");
 }
 
+console.log({}+[])
+
+
+
 //  console.log( pattern(7),"1234567\n2345671\n3456712\n4567123\n5671234\n6712345\n7123456");
 //  console.log( pattern(11));
-console.log(pattern(13));
+// console.log(pattern(13));
