@@ -17,3 +17,19 @@ function removeBMW(str){
   }
   return arr.join('')
 }
+
+function removeBMW(str){
+  //TO DO
+  if(typeof str !='string'){
+    throw new Error("This program only works for text.");
+  }
+  const letters = new Set(['b','B','m','M','w','W']);
+
+  const newStr = [];
+  for(let letter of str){
+    if(!(letters.has(letter))){
+      newStr.push(letter)
+    }
+  }
+  return newStr.join('');
+}
