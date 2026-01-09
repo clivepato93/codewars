@@ -1,3 +1,6 @@
+// https://www.codewars.com/kata/5857e8bb9948644aa1000246
+// Date Time
+// Fundamentals
 // split the string 
 // i could do a subtract from 24hrs in seconds
 // as long as the seconds is greater than minus that should work
