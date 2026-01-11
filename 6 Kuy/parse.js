@@ -1,7 +1,7 @@
 // https://www.codewars.com/kata/582c5382f000e535100001a7/train/javascript
 // TAGS Linked Lists
 // Recursion
-// Algorithms
+// Algorithms 
 
 class Node {
   constructor(data, next = null) {
@@ -9,6 +9,18 @@ class Node {
     this.next = next;
   }
 }
+
+function parse(string) {
+        // Write your code here
+        if (string == "null") return null;
+        let arr = string.split(" -> ");
+        let nodeList = null
+        for (let i = arr.length-2; i>=0; i--) {
+            nodeList = new Node(+arr[i],nodeList)
+
+        }
+        return nodeList;
+    }
 
 // function parse(string) {
 //   // Write your code here
