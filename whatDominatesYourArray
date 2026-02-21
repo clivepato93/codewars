@@ -1,0 +1,18 @@
+// https://www.codewars.com/kata/559e10e2e162b69f750000b4/train/javascript
+
+// Arrays
+// Fundamentals
+
+function dominator(arr) {
+   //code me
+  let obj = {};
+  for(let num of arr){
+    obj[num] = (obj[num]|| 0) +1;
+  }
+  for(let n in obj) {
+    if(obj[n] > arr.length/2){
+      return +n
+    }
+  }
+  return -1
+}
